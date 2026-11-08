@@ -28,7 +28,7 @@ jobs:
         uses: google-github-actions/auth@v3
         with:
           project_id: iam-test-512213
-          workload_identity_provider: projects/867496761966/locations/global/workloadIdentityPools/github-wif-demo/providers/github-oidc
+          workload_identity_provider: projects/867496761966/locations/global/workloadIdentityPools/github-wif-demo-v2/providers/github-oidc
 
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v3
