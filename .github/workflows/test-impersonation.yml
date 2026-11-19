@@ -16,7 +16,7 @@ jobs:
       PROJECT_ID: "iam-test-512213"
       PROJECT_NUMBER: "867496761966"
       POOL_ID: "github-wif-demo-v2"
-      PROVIDER_ID: "YOUR_PROVIDER_ID"
+      PROVIDER_ID: "github-oidc"
       SERVICE_ACCOUNT: "wif-impersonation-test@iam-test-512213.iam.gserviceaccount.com"
 
     steps:
