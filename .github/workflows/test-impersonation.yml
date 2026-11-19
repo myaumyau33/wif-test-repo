@@ -1,0 +1,28 @@
+name: Test Service Account Impersonation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  test-impersonation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    env:
+      PROJECT_ID: "iam-test-512213"
+      PROJECT_NUMBER: "867496761966"
+      POOL_ID: "github-wif-demo-v2"
+      PROVIDER_ID: "YOUR_PROVIDER_ID"
+      SERVICE_ACCOUNT: "wif-impersonation-test@iam-test-512213.iam.gserviceaccount.com"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Run impersonation test
+        shell: bash
+        run: bash scripts/test-impersonation.sh
